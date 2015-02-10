@@ -1,0 +1,15 @@
+sandstorm reveal
+	? configuration
+	[ ] create slides
+		markdown
+		ace editor
+		iframe
+		? handle html when needed
+		[ ] self host js
+		[ ] python server for html+save
+	[ ] offline/download
+	[ ] verson control (git?)
+	[ ] sync slide position and text
+	[ ] use meteor
+	[ ] home and sys directories should not be needed
+	[ ] clean up reveal (static) directory
