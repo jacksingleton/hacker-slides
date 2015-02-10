@@ -6,10 +6,12 @@ sandstorm reveal
 		iframe
 		? handle html when needed
 	[x] python server for html+save
+	[ ] autosave
+	[ ] auto refresh
+	[ ] clean up reveal (static) directory
 	[ ] self host js
-	[ ] offline/download
-	[ ] verson control (git?)
 	[ ] sync slide position and text
+	[ ] verson control (git?)
+	[ ] offline/download
 	[ ] use meteor
 	[ ] home and sys directories should not be needed
-	[ ] clean up reveal (static) directory
