@@ -9,6 +9,11 @@
 - Seperate slides using '`---`' on a blank line
 - Write github flavored markdown
 - You must save manually for now (top right)
+
+---
+
+## Quick tips
+
 - There is also a speaker view, with notes
 - Press `?` with focus on the presentation for shortcuts
 
