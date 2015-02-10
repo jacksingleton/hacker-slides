@@ -4,6 +4,6 @@ This is a simple app that combines [Ace Editor](https://github.com/ajaxorg/ace/)
 
 You can write markdown on the left, and preview your presentation on the right.
 
-Currently just a prototype - but it is functional. See hacker-slides.otl for my notes and TODO's
+Currently just a prototype - but it is functional. See [hacker-slides.otl](hacker-slides.otl) for my notes and TODO's
 
 
