@@ -54,9 +54,7 @@
 
         <div id="edit-pane">
           <div id="controls">
-            <a href="#" onclick="save(); return false">Save</a>
-            |
-            <a href="/static/slides.html" target="_blank" onclick="save();">Present</a>
+            <a href="/static/slides.html" target="_blank" onclick="save();"> Present</a>
           </div>
           <div id="editor"></div>
         </div>
@@ -67,6 +65,7 @@
 
         <script src="/static/js/ace-1.1.8/ace.js" type="text/javascript" charset="utf-8"></script>
         <script src="/static/js/jquery-2.1.3.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/static/js/jquery-debounce-1.0.5.js" type="text/javascript" charset="utf-8"></script>
         <script src="/static/js/save.js" type="text/javascript" charset="utf-8"></script>
         <script>
             $(function() {
@@ -80,6 +79,7 @@
                 editor.setValue(data, -1);
               });
 
+              $('#editor').keyup($.debounce(save, 300));
             });
         </script>
 

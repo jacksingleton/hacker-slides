@@ -7,9 +7,9 @@ sandstorm reveal
 		? handle html when needed
 	[x] python server for html+save
 	[x] self host js
-	[ ] refresh without flashing
-	[ ] autosave
-	[ ] auto refresh
+	[x] refresh without flashing
+	[x] autosave
+	[x] auto refresh
 	[ ] auto scroll to slide
 	[ ] clean up reveal (static) directory
 	[ ] verson control (git?)
