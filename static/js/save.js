@@ -1,7 +1,7 @@
 function save() {
-  var editor = ace.edit("edit");
+  var editor = ace.edit("editor");
   $.post("/slides.md", editor.getValue());
 
   var iframe = document.getElementById('slides-frame');
-  iframe.src = iframe.src;
+  iframe.contentWindow.location.reload(true);
 }

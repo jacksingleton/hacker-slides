@@ -79,7 +79,6 @@
 
             function externalLinksInNewWindow() {
               $(document.links).filter(function() {
-                console.log(this);
                 return this.hostname != window.location.hostname;
               }).attr('target', '_blank');
             }
