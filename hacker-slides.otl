@@ -1,12 +1,12 @@
 sandstorm reveal
 	? configuration
-	[ ] create slides
+	create slides
 		markdown
 		ace editor
 		iframe
 		? handle html when needed
-		[ ] self host js
-		[ ] python server for html+save
+	[x] python server for html+save
+	[ ] self host js
 	[ ] offline/download
 	[ ] verson control (git?)
 	[ ] sync slide position and text
