@@ -16,7 +16,7 @@
 
 - There is also a speaker view, with notes - press '`s`'
 - Press '`?`' with focus on the presentation for shortcuts
-- <em>You can use html when nessacary</em>
+- <em>You can use html when necessary</em>
 
 Note:
 - Anything after `Note:` will only appear here
