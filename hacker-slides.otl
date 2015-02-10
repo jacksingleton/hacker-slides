@@ -6,7 +6,7 @@ sandstorm reveal
 		iframe
 		? handle html when needed
 	[x] python server for html+save
-	[ ] self host js
+	[x] self host js
 	[ ] refresh without flashing
 	[ ] autosave
 	[ ] auto refresh
