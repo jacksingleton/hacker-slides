@@ -11,8 +11,7 @@ You can write markdown on the left, and preview your presentation on the right.
 - [x] auto refresh
 - [x] auto scroll to slide
 - [x] fix refresh while animating problem
-- [ ] BUG: content gets wiped when opening inspector from editor
-- [ ] clean up main.py
+- [x] clean up main.py
 - [ ] bug: change slide beyond start or finish
 - [ ] clean up hacky window messaging (slides.html:104)
 - [ ] clean up reveal (static) directory
