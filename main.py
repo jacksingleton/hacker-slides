@@ -5,6 +5,7 @@ import os
 
 from flask import Flask
 from flask import request
+from flask import make_response
 
 app = Flask(__name__)
 
@@ -23,7 +24,7 @@ def save_slides():
     new_slides = request.get_data()
     with open('/var/slides.md', 'wb') as fp:
         fp.write(new_slides)
-    return "OK"
+    return make_response("", 200)
 
 if __name__ == '__main__':
     if not os.path.isfile("/var/slides.md"):
