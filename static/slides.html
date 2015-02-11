@@ -97,10 +97,15 @@
             initializeReveal();
 
             window.addEventListener("message", function(e) {
-              if (e.origin === window.location.origin && e.data === 'save') {
-                reloadMarkdown();
+              if (e.origin === window.location.origin) {
+                if (e.data === 'save') {
+                  reloadMarkdown();
+                } else {
+                  Reveal.slide(e.data)
+                }
               }
             }, false);
+
 		</script>
 
 	</body>
