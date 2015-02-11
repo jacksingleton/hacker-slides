@@ -77,10 +77,10 @@
               var markdownReference = $('<section/>', {
                   'data-markdown': "../slides.md",
                   'data-separator': "^-( *)-( *)-( *-*)*",
-                  'data-separator-vertical': "^\n\n",
                   'data-separator-notes': "^Note:",
                   'data-charset': "utf-8"
               });
+
               $('.slides').html(markdownReference);
             }
 
@@ -101,16 +101,9 @@
             insertMarkdownReference();
             initializeReveal();
 
-            window.addEventListener("message", function(e) {
-              if (e.origin === window.location.origin) {
-                if (e.data === 'save') {
-                  reloadMarkdown();
-                } else {
-                  Reveal.slide(e.data)
-                }
-              }
-            }, false);
-
+            // Monkey patch Reveal so we can reload markdown through an
+            // inter window message (using the reveal rpc api)
+            Reveal.reloadMarkdown = reloadMarkdown;
 		</script>
 
 	</body>
