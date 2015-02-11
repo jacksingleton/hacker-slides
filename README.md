@@ -12,13 +12,13 @@ You can write markdown on the left, and preview your presentation on the right.
 - [x] auto scroll to slide
 - [x] fix refresh while animating problem
 - [x] clean up main.py
-- [ ] bug: change slide beyond start or finish
-- [ ] clean up hacky window messaging (slides.html:104)
+- [x] bug: change slide beyond start or finish
+- [x] clean up hacky window messaging (slides.html:104)
 - [ ] clean up reveal (static) directory
 - [ ] verson control (git?)
 - [ ] offline/download
 - [ ] use meteor?
 - [ ] test infra
 - [ ] automated build
-- [ ] fade out inactive pane to make focus clear
+- [ ] fade out inactive pane to make focus clear?
 - [ ] configuration
