@@ -13,6 +13,7 @@ You can write markdown on the left, and preview your presentation on the right.
 - [ ] fix notes
 - [ ] fix refresh while animating problem
 - [ ] clean up main.py
+- [ ] bug: change slide beyond start or finish
 - [ ] clean up reveal (static) directory
 - [ ] verson control (git?)
 - [ ] offline/download
