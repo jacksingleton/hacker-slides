@@ -45,6 +45,10 @@
         <script src="js/jquery-2.1.3.min.js"></script>
 
 		<script>
+            function isPreview() {
+              return !!window.location.search.match(/preview/gi);
+            }
+
             function initializeReveal() {
               // Full list of configuration options available at:
               // https://github.com/hakimel/reveal.js#configuration
@@ -53,8 +57,9 @@
                   progress: true,
                   history: true,
                   center: true,
-
                   transition: 'slide', // none/fade/slide/convex/concave/zoom
+                  transitionSpeed: isPreview() ? 'fast' : 'default',
+                  embedded: isPreview() ? true : false,
 
                   // Optional reveal.js plugins
                   dependencies: [

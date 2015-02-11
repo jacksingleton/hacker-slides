@@ -10,9 +10,10 @@ You can write markdown on the left, and preview your presentation on the right.
 - [x] autosave
 - [x] auto refresh
 - [x] auto scroll to slide
-- [ ] fix refresh while animating problem
+- [x] fix refresh while animating problem
 - [ ] clean up main.py
 - [ ] bug: change slide beyond start or finish
+- [ ] clean up hacky window messaging (slides.html:104)
 - [ ] clean up reveal (static) directory
 - [ ] verson control (git?)
 - [ ] offline/download
