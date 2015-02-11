@@ -114,8 +114,10 @@
             ace.edit('editor').getSession().selection.on('changeCursor', function(e) {
               var cursorRow = ace.edit('editor').getCursorPosition().row;
               var currentSlide = currentCursorSlide(cursorRow);
-              $('#slides-frame')[0].contentWindow.postMessage(
-                currentSlide, window.location.origin);
+              $('#slides-frame')[0].contentWindow.postMessage(JSON.stringify({
+                method: 'slide',
+                args: [currentSlide]
+              }), window.location.origin);
             });
 
         </script>
