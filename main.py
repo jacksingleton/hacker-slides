@@ -18,8 +18,7 @@ def get_slides():
     with open("/var/slides.md") as fp:
         return fp.read()
 
-# TODO: PUT
-@app.route('/slides.md', methods=['POST'])
+@app.route('/slides.md', methods=['PUT'])
 def save_slides():
     new_slides = request.get_data()
     with open('/var/slides.md', 'wb') as fp:
