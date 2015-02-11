@@ -12,6 +12,7 @@ You can write markdown on the left, and preview your presentation on the right.
 - [x] auto scroll to slide
 - [ ] fix notes
 - [ ] fix refresh while animating problem
+- [ ] clean up main.py
 - [ ] clean up reveal (static) directory
 - [ ] verson control (git?)
 - [ ] offline/download
