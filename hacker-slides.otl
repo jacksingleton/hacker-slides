@@ -1,18 +1,17 @@
 sandstorm reveal
 	? configuration
-	create slides
-		markdown
-		ace editor
-		iframe
-		? handle html when needed
 	[x] python server for html+save
 	[x] self host js
 	[x] refresh without flashing
 	[x] autosave
 	[x] auto refresh
-	[ ] auto scroll to slide
+	[x] auto scroll to slide
+	[ ] fix notes
+	[ ] fix refresh while animating problem
 	[ ] clean up reveal (static) directory
 	[ ] verson control (git?)
 	[ ] offline/download
 	[ ] use meteor?
-	[ ] home and sys directories should not be needed
+	[ ] test infra
+	[ ] automated build
+	[ ] fade out inactive pane to make focus clear
