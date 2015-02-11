@@ -1,6 +1,6 @@
 # Sandstorm Hacker Slides
 
-This is a simple app that combines [Ace Editor](https://github.com/ajaxorg/ace/) and [RevealJS](https://github.com/hakimel/reveal.js)
+A simple app that combines [Ace Editor](https://github.com/ajaxorg/ace/) and [RevealJS](https://github.com/hakimel/reveal.js)
 
 You can write markdown on the left, and preview your presentation on the right.
 
