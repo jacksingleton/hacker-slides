@@ -9,6 +9,7 @@ You can write markdown on the left, and preview your presentation on the right.
 - [x] autosave
 - [x] auto refresh
 - [x] auto scroll to slide
+- [ ] prevent non owners from editing
 - [ ] clean up reveal (static) directory
 - [ ] verson control (git?)
 - [ ] offline/download
@@ -17,4 +18,4 @@ You can write markdown on the left, and preview your presentation on the right.
 - [ ] automated build
 - [ ] fade out inactive pane to make focus clear?
 - [ ] configuration
-
+- [ ] collaboration? (XSS risk)
