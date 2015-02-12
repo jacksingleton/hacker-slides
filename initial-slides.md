@@ -8,7 +8,7 @@
 
 - Seperate slides using '`---`' on a blank line
 - Write github flavored markdown
-- You must save manually for now (top right in edit panel)
+- Click 'Present' (top right) when you're ready to talk
 
 ---
 
