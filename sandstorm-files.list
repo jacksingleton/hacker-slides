@@ -1937,7 +1937,6 @@ opt/sandstorm/sandstorm-66/usr/share
 opt/sandstorm/sandstorm-66/usr/share/locale
 opt/sandstorm/sandstorm-66/var
 opt/sandstorm/tmp
-opt/sandstorm/tmp/sandstorm-grain
 opt/sandstorm/var
 opt/sandstorm/var/log
 opt/sandstorm/var/mongo
@@ -1989,15 +1988,6 @@ run/systemd/users
 run/udev
 run/udev/data
 run/udev/links
-run/udev/links/\x2fdisk\x2fby-id\x2fata-VBOX_HARDDISK_VB6841734a-cdf102b8
-run/udev/links/\x2fdisk\x2fby-id\x2fata-VBOX_HARDDISK_VB6841734a-cdf102b8-part1
-run/udev/links/\x2fdisk\x2fby-label\x2fcloudimg-rootfs
-run/udev/links/\x2fdisk\x2fby-uuid\x2f1d44fcbe-2401-4009-9393-4941a84a4c14
-run/udev/links/\x2finput\x2fby-path\x2fpci-0000:00:04.0-event-mouse
-run/udev/links/\x2finput\x2fby-path\x2fplatform-i8042-serio-0-event-kbd
-run/udev/links/\x2finput\x2fby-path\x2fplatform-i8042-serio-1-event-mouse
-run/udev/links/\x2finput\x2fby-path\x2fplatform-i8042-serio-1-mouse
-run/udev/links/\x2frtc
 run/udev/tags
 run/udev/tags/power-switch
 run/udev/tags/seat
