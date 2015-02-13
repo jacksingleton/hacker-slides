@@ -1,8 +1,8 @@
 # Sandstorm Hacker Slides
 
-## [Try it on Sandstorm](https://demo.sandstorm.io/appdemo/7qvcjh7gk0rzdx1s3c8gufd288sesf6vvdt297756xcv4q8xxvhh)
-
 ![Screenshot](https://cloud.githubusercontent.com/assets/1058938/6180867/9acdea84-b2df-11e4-8ae8-b01f2c4d7e1d.png)
+
+## [Try it on Sandstorm](https://demo.sandstorm.io/appdemo/7qvcjh7gk0rzdx1s3c8gufd288sesf6vvdt297756xcv4q8xxvhh)
 
 A simple app that combines [Ace Editor](https://github.com/ajaxorg/ace/) and [RevealJS](https://github.com/hakimel/reveal.js)
 
