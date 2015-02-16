@@ -6,7 +6,7 @@
 
 ## The Basics
 
-- Seperate slides using '`---`' on a blank line
+- Separate slides using '`---`' on a blank line
 - Write github flavored markdown
 - Click 'Present' (top right) when you're ready to talk
 
