@@ -6,7 +6,7 @@ A simple app that combines [Ace Editor](https://github.com/ajaxorg/ace/) and [Re
 
 You can write markdown on the left, and preview your presentation on the right.
 
-Note: This is an initial release. It might have bugs, crash, and/or delete all your work.
+*Note: This is an initial release. It might have bugs, crash, and/or delete all your work.*
 
 **[Try it on Sandstorm!](https://demo.sandstorm.io/appdemo/7qvcjh7gk0rzdx1s3c8gufd288sesf6vvdt297756xcv4q8xxvhh)**
 
