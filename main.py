@@ -2,6 +2,7 @@
 
 import shutil
 import os
+import logging
 
 from flask import Flask
 from flask import request
@@ -15,13 +16,13 @@ def index():
 
 @app.route('/slides.md', methods=['GET'])
 def get_slides():
-    with open("/var/slides.md") as fp:
+    with open("/var/slides.md", encoding='utf-8') as fp:
         return fp.read()
 
 @app.route('/slides.md', methods=['PUT'])
 def save_slides():
-    new_slides = request.get_data()
-    with open('/var/slides.md', 'wb') as fp:
+    new_slides = request.get_data().decode('utf-8')
+    with open('/var/slides.md', 'w', encoding='utf-8') as fp:
         fp.write(new_slides)
     return make_response("", 200)
 
