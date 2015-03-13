@@ -23,10 +23,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     $port += 1
   end
 
+  # VM will only be accessable by the host (not other machines on the network)
+  config.vm.network "private_network", type: "dhcp"
+
+  # Instead, you could:
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
   # your network.
-  config.vm.network :public_network
+  # config.vm.network :public_network
 
   # Use a shell script to "provision" the box. This install Sandstorm using
   # the bundled installer.
