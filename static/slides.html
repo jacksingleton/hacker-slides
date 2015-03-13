@@ -73,6 +73,14 @@
               });
             }
 
+            function highlightAnyCodeBlocks() {
+              $(document).ready(function() {
+                $('pre code').each(function(i, block) {
+                  hljs.highlightBlock(block);
+                });
+              });
+            }
+
             function insertMarkdownReference() {
               var markdownReference = $('<section/>', {
                   'data-markdown': "../slides.md",
@@ -84,12 +92,16 @@
               $('.slides').html(markdownReference);
             }
 
+            function scrollToCurrentSlide() {
+              var i = Reveal.getIndices();
+              Reveal.slide(i.h, i.v, i.f);
+            }
+
             function reloadMarkdown() {
               insertMarkdownReference();
               RevealMarkdown.initialize();
-
-              var i = Reveal.getIndices();
-              Reveal.slide(i.h, i.v, i.f);
+              highlightAnyCodeBlocks();
+              scrollToCurrentSlide();
             }
 
             function externalLinksInNewWindow() {
