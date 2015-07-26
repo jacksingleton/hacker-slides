@@ -42,6 +42,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "shell", inline: "usermod -a -G 'sandstorm' 'vagrant'"
 
   config.vm.provision "shell", inline: <<-EOF
+    sudo apt-get update
     sudo apt-get install -y python3-pip
     pip3 install -r /vagrant/requirements.txt
     sudo cp /vagrant/initial-slides.md /var/slides.md && sudo chmod 777 /var/slides.md
