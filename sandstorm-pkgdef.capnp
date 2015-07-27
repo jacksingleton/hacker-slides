@@ -13,15 +13,18 @@ const pkgdef :Spk.PackageDefinition = (
   # Your app ID is actually its public key. The private key was placed in
   # your keyring. All updates must be signed with the same key.
 
+
   manifest = (
+    appTitle = (defaultText = "Hacker Slides"),
     # This manifest is included in your app package to tell Sandstorm
     # about your app.
 
     appVersion = 1,  # Increment this for every release.
+    appMarketingVersion = (defaultText = "0.1.0"),
 
     actions = [
       # Define your "new document" handlers here.
-      ( title = (defaultText = "New HackerSlides"),
+      ( title = (defaultText = "New Slides"),
         command = .myCommand
         # The command to run when starting for the first time. (".myCommand"
         # is just a constant defined at the bottom of the file.)
