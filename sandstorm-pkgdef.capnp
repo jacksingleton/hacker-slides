@@ -25,17 +25,45 @@ const pkgdef :Spk.PackageDefinition = (
     actions = [
       # Define your "new document" handlers here.
       ( title = (defaultText = "New Slides"),
+        nounPhrase = (defaultText = "slides"),
         command = .myCommand
         # The command to run when starting for the first time. (".myCommand"
         # is just a constant defined at the bottom of the file.)
       )
     ],
 
-    continueCommand = .myCommand
+    continueCommand = .myCommand,
     # This is the command called to start your app back up after it has been
     # shut down for inactivity. Here we're using the same command as for
     # starting a new instance, but you could use different commands for each
     # case.
+
+    metadata = (
+      icons = (
+        appGrid = (svg = embed "app-graphics/hackerslides-128.svg"),
+        grain = (svg = embed "app-graphics/hackerslides-24.svg"),
+        market = (svg = embed "app-graphics/hackerslides-150.svg"),
+      ),
+
+      website = "https://github.com/jacksingleton/hacker-slides",
+      codeUrl = "https://github.com/jacksingleton/hacker-slides",
+      license = (openSource = mit),
+      categories = [office, productivity],
+
+      author = (
+        contactEmail = "hackerslides@jacksingleton.com",
+        pgpSignature = embed "pgp-signature",
+      ),
+
+      pgpKeyring = embed "pgp-keyring",
+
+      description = (defaultText = embed "description.md"),
+      shortDescription = (defaultText = "Presentation tool"),
+
+      screenshots = [
+        (width = 448, height = 343, png = embed "screenshot.png")
+      ],
+    ),
   ),
 
   sourceMap = (

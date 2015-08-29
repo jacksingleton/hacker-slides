@@ -1,0 +1,1 @@
+An original Sandstorm app that combines [Ace Editor](https://github.com/ajaxorg/ace/)and [RevealJS](https://github.com/hakimel/reveal.js) into a slides / presentation app.Slides are written in Markdown, with a live preview on the right.
