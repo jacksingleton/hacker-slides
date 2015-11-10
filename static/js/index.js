@@ -40,8 +40,6 @@ $(function() {
     editor.setValue(data, -1);
   });
 
-  $('#editor').keyup($.debounce(save, 300));
-
   ace.edit('editor').getSession().selection.on('changeCursor', function(e) {
     var cursorRow = ace.edit('editor').getCursorPosition().row;
     var currentSlide = currentCursorSlide(cursorRow);
