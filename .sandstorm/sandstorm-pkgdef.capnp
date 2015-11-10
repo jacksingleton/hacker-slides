@@ -77,9 +77,6 @@ const pkgdef :Spk.PackageDefinition = (
         hidePaths = [ "home", "proc", "sys", "vagrant", "*.pyc",
                       "etc/passwd", "etc/hosts", "etc/host.conf",
                       "etc/nsswitch.conf", "etc/resolv.conf",
-                      # For this app, we exclude a node_modules directory that
-                      # is only used at build time.
-                      "opt/app/static/node_modules",
                       # For all vagrant-spk apps, we don't care about the Vagrant
                       # VM state, so we ignore it here.
                       "opt/app/.sandstorm/.vagrant"]
