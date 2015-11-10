@@ -10,7 +10,7 @@ You can write markdown on the left, and preview your presentation on the right.
 
 ## Hack on Hacker Slides
 
-I built this app very quickly and it is unfortunatly not one of my main
+I built this app very quickly and it is unfortunately not one of my main
 priorities right now. Contributions are very welcome!
 
 Hacker Slides uses [vagrant-spk](https://github.com/sandstorm-io/vagrant-spk), so dev setup is quite easy.
