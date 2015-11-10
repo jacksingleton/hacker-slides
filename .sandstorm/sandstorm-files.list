@@ -53,6 +53,7 @@ opt/app/initial-slides.md
 opt/app/main.py
 opt/app/static/index.html
 opt/app/static/slides.html
+opt/app/static/js/save.js
 opt/app/static/revealjs/css/print/paper.css
 opt/app/static/revealjs/css/reveal.css
 opt/app/static/revealjs/css/theme/black.css
@@ -62,7 +63,6 @@ opt/app/static/revealjs/js/ace-1.1.8/theme-chrome.js
 opt/app/static/revealjs/js/jquery-2.1.3.min.js
 opt/app/static/revealjs/js/jquery-debounce-1.0.5.js
 opt/app/static/revealjs/js/reveal.js
-opt/app/static/revealjs/js/save.js
 opt/app/static/revealjs/lib/css/zenburn.css
 opt/app/static/revealjs/lib/font/source-sans-pro/source-sans-pro-italic.woff
 opt/app/static/revealjs/lib/font/source-sans-pro/source-sans-pro-regular.woff

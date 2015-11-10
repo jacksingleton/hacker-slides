@@ -6,52 +6,10 @@
 
         <title>Hacker Slides</title>
 
-        <style type="text/css">
-            body {
-                margin: 0 0 0 0;
-            }
-            #edit-pane {
-                position: fixed;
-                top: 0;
-                width: 40%;
-                height: 100%;
-                font-size: 16px;
-            }
-            #edit-pane #controls {
-              color: #2e2e2e;
-              position: absolute;
-              right: 0;
-              top: 0;
-              z-index: 1;
-              margin: 5px 5px 0 0;
-            }
-            #edit-pane #controls a {
-              font-weight: bold;
-              text-decoration: none;
-              color: #2e2e2e;
-            }
-            #editor {
-                width: 100%;
-                height: 100%;
-                font-size: 16px;
-            }
-            #preview {
-                position: absolute;
-                left: 40%;
-                top: 0;
-                right: 0;
-                bottom: 0;
-            }
-            #preview iframe {
-                height: 100%;
-                width: 100%;
-                border: none;
-            }
-        </style>
+        <link rel="stylesheet" href="/static/css/index.css">
     </head>
 
     <body>
-
         <div id="edit-pane">
           <div id="controls">
             <a href="/static/slides.html" target="_blank" onclick="save();"> Present</a>
@@ -66,61 +24,7 @@
         <script src="/static/revealjs/js/ace-1.1.8/ace.js" type="text/javascript" charset="utf-8"></script>
         <script src="/static/revealjs/js/jquery-2.1.3.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="/static/revealjs/js/jquery-debounce-1.0.5.js" type="text/javascript" charset="utf-8"></script>
-        <script src="/static/revealjs/js/save.js" type="text/javascript" charset="utf-8"></script>
-        <script>
-            $(function() {
-              var editor = ace.edit("editor");
-              editor.setTheme("ace/theme/chrome");
-              editor.getSession().setMode("ace/mode/markdown");
-              editor.getSession().setUseWrapMode(true);
-              editor.setShowPrintMargin(true);
-
-              $.get('/slides.md', function(data) {
-                editor.setValue(data, -1);
-              });
-
-              $('#editor').keyup($.debounce(save, 300));
-            });
-
-            function slideSeparatorLines(text) {
-              var lines = text.split('\n');
-
-              var separatorLineNumbers = [];
-
-              for (i = 0; i < lines.length; i++) {
-                var line = lines[i];
-                if (line === '---') {
-                  separatorLineNumbers.push(i);
-                }
-              }
-
-              return separatorLineNumbers;
-            }
-
-            function currentCursorSlide(cursorLine) {
-              var text = ace.edit("editor").getValue();
-              var separatorPositions = slideSeparatorLines(text);
-              var slideNumber = separatorPositions.length;
-              separatorPositions.every(function(pos, num) {
-                if (pos >= cursorLine) {
-                  slideNumber = num;
-                  return false;
-                }
-                return true;
-              });
-              return slideNumber;
-            }
-
-            ace.edit('editor').getSession().selection.on('changeCursor', function(e) {
-              var cursorRow = ace.edit('editor').getCursorPosition().row;
-              var currentSlide = currentCursorSlide(cursorRow);
-              $('#slides-frame')[0].contentWindow.postMessage(JSON.stringify({
-                method: 'slide',
-                args: [currentSlide]
-              }), window.location.origin);
-            });
-
-        </script>
-
+        <script src="/static/js/save.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/static/js/index.js" type="text/javascript" charset="utf-8"></script>
     </body>
 </html>
