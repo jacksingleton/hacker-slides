@@ -21,4 +21,16 @@ set -euo pipefail
 
 # By default, this script does nothing.  You'll have to modify it as
 # appropriate for your application.
-sudo DEBIAN_FRONTEND=noninteractive apt-get -y install python3 python3-flask
+sudo DEBIAN_FRONTEND=noninteractive apt-get -y install python3 python3-flask \
+    build-essential python3-dev python3-pip autoconf pkg-config libtool git
+
+# Install capnproto from source, since Sandstorm currently depends on unreleased capnproto features.
+if [ ! -e /usr/local/bin/capnp ]; then
+    [ -d capnproto ] || git clone https://github.com/sandstorm-io/capnproto
+    pushd capnproto/c++
+    autoreconf -i && ./configure && make -j2 && sudo make install
+    popd
+fi
+
+# Install pycapnp from PyPI, which should use the system libcapnp we just installed
+sudo pip3 install pycapnp
