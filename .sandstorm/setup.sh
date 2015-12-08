@@ -34,3 +34,8 @@ fi
 
 # Install pycapnp from PyPI, which should use the system libcapnp we just installed
 sudo pip3 install pycapnp
+
+# Remove python3-dev, since it puts 55MB of static libraries in usr/lib/python3.4
+# that we don't need.
+apt-get -y remove python3-dev
+apt-get -y autoremove

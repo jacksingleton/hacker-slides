@@ -91,7 +91,12 @@ const pkgdef :Spk.PackageDefinition = (
   # `spk dev` will write a list of all the files your app uses to this file.
   # You should review it later, before shipping your app.
 
-  alwaysInclude = ["opt/app/static"]
+  alwaysInclude = [
+    "usr/lib/python3.4", # include all of the Python runtime
+    "usr/lib/python3", # include pure-Python packages from Debian
+    "usr/local/lib/python3.4", # include python packages from pip
+    "opt/app/static",
+  ],
   # Fill this list with more names of files or directories that should be
   # included in your package, even if not listed in sandstorm-files.list.
   # Use this to force-include stuff that you know you need but which may
