@@ -72,7 +72,6 @@ def publish(session_id):
 
 @app.route('/')
 def index():
-    # TODO: put the publishing root somewhere in the HTML.
     publishing_root = publish(request.headers["X-Sandstorm-Session-Id"])
     return render_template('index.html', publishing_root=publishing_root)
 
