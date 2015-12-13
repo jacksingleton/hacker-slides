@@ -24,6 +24,8 @@ hack_session = capnp.load("/opt/sandstorm/latest/usr/include/sandstorm/hack-sess
 
 CODE_DIR = os.path.dirname(os.path.realpath(__file__))
 
+SLIDES_PATH = '/index.html'
+
 
 def update_static_publish_folder():
     """
@@ -36,7 +38,7 @@ def update_static_publish_folder():
         shutil.rmtree("/var/new-www")
     os.mkdir("/var/new-www")
     shutil.copytree(os.path.join(CODE_DIR, "static"), "/var/new-www/static")
-    shutil.copy2("/var/new-www/static/slides.html", "/var/new-www/index.html")
+    shutil.copy2("/var/new-www/static/slides.html", "/var/new-www" + SLIDES_PATH)
     if os.path.exists("/var/www"):
         os.rename("/var/www", "/var/old-www")
     os.rename("/var/new-www", "/var/www")
@@ -59,4 +61,4 @@ def publish(session_id):
     session_ctx = bridge_cap.getSessionContext(session_id).wait().context.cast_as(hack_session.HackSessionContext)
     public_id = session_ctx.getPublicId().wait()
     publishing_root = public_id.autoUrl
-    return publishing_root
+    return publishing_root + SLIDES_PATH
