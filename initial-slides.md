@@ -17,6 +17,7 @@
 - There is also a speaker view, with notes - press '`s`'
 - Press '`?`' with focus on the presentation for shortcuts
 - <em>You can use html when necessary</em>
+- Share the 'Present' URL with anyone you like!
 
 Note:
 - Anything after `Note:` will only appear here
