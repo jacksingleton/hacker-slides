@@ -1,5 +1,5 @@
 $(function() {
-  function save() {
+  window.save = function() {
     var editor = ace.edit("editor");
 
     $.ajax("/slides.md", {type: 'put', data: editor.getValue()});
@@ -9,5 +9,5 @@ $(function() {
     }), window.location.origin);
   }
 
-  $('#editor').keyup($.debounce(save, 300));
+  $('#editor').keyup($.debounce(window.save, 300));
 });
