@@ -6,7 +6,7 @@ A simple app that combines [Ace Editor](https://github.com/ajaxorg/ace/) and [Re
 
 You can write markdown on the left, and preview your presentation on the right.
 
-[![Try it on Sandstorm](https://img.shields.io/badge/try-live%20demo-783189.svg)](https://demo.sandstorm.io/appdemo/7qvcjh7gk0rzdx1s3c8gufd288sesf6vvdt297756xcv4q8xxvhh) **[Try it on Sandstorm!](https://demo.sandstorm.io/appdemo/7qvcjh7gk0rzdx1s3c8gufd288sesf6vvdt297756xcv4q8xxvhh)**
+[![Try it on Sandstorm](https://img.shields.io/badge/try-live%20demo-783189.svg)](https://demo.sandstorm.io/appdemo/7qvcjh7gk0rzdx1s3c8gufd288sesf6vvdt297756xcv4q8xxvhh)
 
 ## Hack on Hacker Slides
 
