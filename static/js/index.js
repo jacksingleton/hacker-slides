@@ -22,7 +22,7 @@ $(function() {
 			var result = {
 			"index" :  i,
 			"slide" : slideIndex,
-			"subSlide" : ubSlideIndex++
+			"subSlide" : subSlideIndex++
 			};
 			separatorLineNumbers.push(result);
 		}
