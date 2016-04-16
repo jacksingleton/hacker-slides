@@ -1,55 +1,28 @@
 $(function() {
 
-  function slideSeparatorLines(text) {
-    var lines = text.split('\n');
-
-    var separatorLineNumbers = [];
-
-    var slideIndex = 0 ;
-    var subSlideIndex = 0 ;
-
-    for (i = 0; i < lines.length; i++) {
-      var line = lines[i];
-      if (line === '---') {
-			var result = {
-			"index" :  i,
-			"slide" : slideIndex++,
-			"subSlide" : 0
-			};
-			separatorLineNumbers.push(result);
-                        subSlideIndex = 0
-		} else if (line === '--') {
-			var result = {
-			"index" :  i,
-			"slide" : slideIndex,
-			"subSlide" : subSlideIndex++
-			};
-			separatorLineNumbers.push(result);
-		}
-    }
-
-    return separatorLineNumbers;
-  }
-
   function currentCursorSlide(cursorLine) {
     var text = ace.edit("editor").getValue();
-    var separatorPositions = slideSeparatorLines(text);
-    var slideNumber = {
-	"h" : separatorPositions.length,
-        "v" : 0
-    };
-    separatorPositions.every(function(pos, num) {
-      if (pos.index >= cursorLine) {
-        slideNumber.h = pos.slide;
-        slideNumber.v = pos.subSlide;
-        return false;
-      }
-      return true;
-    });
-    return slideNumber;
-  }
+    var lines = text.split('\n');
+    var line = "";
+    var slide = 0;
+    var subSlide = 0;
 
-  function setupAceEditor() {
+    for (i = 0; i <= cursorLine; i++) {
+      if (line.substring(0,3) === '---') {
+        slide = slide + 1;
+        subSlide = 0;
+      } else if (line.substring(0,2) === '--') {
+        subSlide = subSlide + 1;
+      }
+      line = lines[i];
+    }
+    var slideNumber = {
+      "h" : slide,
+      "v" : subSlide,
+    };
+    return slideNumber;
+    } 
+
     var editor = ace.edit("editor");
     editor.setTheme("ace/theme/chrome");
     editor.getSession().setMode("ace/mode/markdown");
@@ -65,7 +38,7 @@ $(function() {
       var currentSlide = currentCursorSlide(cursorRow);
       $('#slides-frame')[0].contentWindow.postMessage(JSON.stringify({
         method: 'slide',
-        args: [currentSlide.h,currentSlide.v]
+        args: [currentSlide.h, currentSlide.v]
       }), window.location.origin);
     });
 });
