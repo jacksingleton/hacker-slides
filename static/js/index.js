@@ -26,7 +26,7 @@ $(function() {
       "v" : subSlide
     };
     return slideNumber;
-    } 
+  } 
 
   function setupAceEditor() {
     var editor = ace.edit("editor");
