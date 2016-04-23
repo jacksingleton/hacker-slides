@@ -6,11 +6,20 @@ $(function() {
   }
 
   window.save = function() {
-    var editor = ace.edit("editor");
+    var markdown,
+        editor;
+
+    if (plainTextMode()) {
+      editor = $('#editor textarea')[0];
+      markdown = editor.value;
+    } else {
+      editor = ace.edit("editor");
+      markdown = editor.getValue();
+    }
 
     $.ajax("/slides.md", {
       type: 'put',
-      data: editor.getValue(),
+      data: markdown,
       success: reloadMarkdown
     });
   };
