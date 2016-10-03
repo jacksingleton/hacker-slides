@@ -18,6 +18,8 @@
 - Press '`?`' with focus on the presentation for shortcuts
 - <em>You can use html when necessary</em>
 - Share the 'Present' URL with anyone you like!
+- Swap '`---`' for '`--`' if you want your slides to move vertically rather than horizontally
+- You can use a combination of '`--`' and `'---`' to add more structure to your presentation
 
 Note:
 - Anything after `Note:` will only appear here
