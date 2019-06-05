@@ -36,7 +36,7 @@ instructions](https://docs.sandstorm.io/en/latest/vagrant-spk/installation/)
 3. Bring up the Vagrant VM
 
   ```bash
-  $ vagrant-spk up
+  $ vagrant-spk vm up
   ```
 
 4. Start the application in dev mode
